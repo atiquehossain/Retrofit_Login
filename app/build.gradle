@@ -36,4 +36,17 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation  'com.github.captain-miao:optroundcardview:1.0.0'
+
+    //image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'pl.bclogic:pulsator4droid:1.0.3'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.7'
+
+
+
 }
