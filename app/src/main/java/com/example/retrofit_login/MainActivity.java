@@ -31,13 +31,24 @@ public class MainActivity extends AppCompatActivity {
 
         email = findViewById(R.id.emailname);
         password = findViewById(R.id.password);
-        button=findViewById(R.id.button);
+        button=(Button)findViewById(R.id.button);
 
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                retrofitcall();
+                Log.e("sametag", "button " );
+
+                if(validation()){
+                    retrofit_log_in_operation();
+
+
+                }
+                else {
+                    Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
+                    Log.e("sametag", "Validation error: " );
+
+                }
 
             }});
         }
@@ -45,18 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        public void retrofitcall(){
-        if(validation()){
-            retrofit_log_in_operation();
 
-
-        }
-        else {
-            Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
-
-        }
-
-    }
 
 
 
