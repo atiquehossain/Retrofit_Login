@@ -3,14 +3,20 @@ package com.example.retrofit_login;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.retrofit_login.Api_Call.RetrofitApi;
 import com.example.retrofit_login.Model.LoginRequest;
+import com.example.retrofit_login.Model.LoginResponse;
 
-import pl.bclogic.pulsator4droid.library.PulsatorLayout;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class MainActivity extends AppCompatActivity {
     TextView email;
@@ -78,6 +84,33 @@ public class MainActivity extends AppCompatActivity {
 
 
         LoginRequest request= new LoginRequest("963a5ef80129a9d5",pass,user);
+        Call<LoginResponse> call = RetrofitApi.getInstance().getService().login(request);
+
+        call.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                LoginResponse loginResponse = response.body();
+
+                if(response.isSuccessful()) {
+
+                    Log.e("sametag", "LoginResponse Success: " + loginResponse.toString());
+                }
+                else {
+
+                }
+
+
+                }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.d("sametag", "LoginResponse Error: ");
+
+
+            }
+        });
 
 
 

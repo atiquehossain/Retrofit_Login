@@ -143,7 +143,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         android:elevation="0dp"
-        android:src="@drawable/stc"
+        android:src="@drawable/mygit"
         app:layout_constraintBottom_toTopOf="@+id/optRoundCardView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
