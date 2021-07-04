@@ -33,24 +33,24 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         button=(Button)findViewById(R.id.button);
 
-        Log.e("sametag", "button " );
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                if(validation()){
-                    retrofit_log_in_operation();
-
-
-                }
-                else {
-                    Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
-                    Log.e("sametag", "Validation error: " );
-
-                }
-
-            }});
+//        Log.e("sametag", "button " );
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//                if(validation()){
+//                    retrofit_log_in_operation();
+//
+//
+//                }
+//                else {
+//                    Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
+//                    Log.e("sametag", "Validation error: " );
+//
+//                }
+//
+//            }});
         }
         //end on create
 
@@ -117,6 +117,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void btn_btn(View view) {
+                        if(validation()){
+                            Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
+                    retrofit_log_in_operation();
+
+
+
+                }
+                else {
+                    Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
+                    Log.e("sametag", "Validation error: " );
+
+                }
 
     }
+}
 

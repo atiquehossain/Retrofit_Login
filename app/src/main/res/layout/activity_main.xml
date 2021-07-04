@@ -125,7 +125,8 @@
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:onClick="btn_btn"/>
 
 
             </LinearLayout>

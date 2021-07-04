@@ -1,53 +1,22 @@
 package com.example.retrofit_login.Model;
 
 public class LoginResponse {
-    public String Command;
-    public String User;
-    public String Success;
+    public boolean Success;
     public String Message;
-    public String ServerRecordId;
-    public String RecordId;
-    public String TotalRecord;
-    public String PageNo;
-    public String PageSize;
-    public String Status;
-    public ApiPacket apiPacket;
+    public String Tag;
+    public long ServerRecordId;
+    public Object RecordId;
+    public int TotalRecord;
+    public int PageNo;
+    public int PageSize;
+    public ApiPacket ApiPacket;
+    public int Status;
 
-    public LoginResponse(String command, String user, String success, String message, String serverRecordId, String recordId, String totalRecord, String pageNo, String pageSize, String status, ApiPacket apiPacket) {
-        Command = command;
-        User = user;
-        Success = success;
-        Message = message;
-        ServerRecordId = serverRecordId;
-        RecordId = recordId;
-        TotalRecord = totalRecord;
-        PageNo = pageNo;
-        PageSize = pageSize;
-        Status = status;
-        this.apiPacket = apiPacket;
-    }
-
-    public String getCommand() {
-        return Command;
-    }
-
-    public void setCommand(String command) {
-        Command = command;
-    }
-
-    public String getUser() {
-        return User;
-    }
-
-    public void setUser(String user) {
-        User = user;
-    }
-
-    public String getSuccess() {
+    public boolean isSuccess() {
         return Success;
     }
 
-    public void setSuccess(String success) {
+    public void setSuccess(boolean success) {
         Success = success;
     }
 
@@ -59,59 +28,96 @@ public class LoginResponse {
         Message = message;
     }
 
-    public String getServerRecordId() {
+    public String getTag() {
+        return Tag;
+    }
+
+    public void setTag(String tag) {
+        Tag = tag;
+    }
+
+    public long getServerRecordId() {
         return ServerRecordId;
     }
 
-    public void setServerRecordId(String serverRecordId) {
+    public void setServerRecordId(long serverRecordId) {
         ServerRecordId = serverRecordId;
     }
 
-    public String getRecordId() {
+    public Object getRecordId() {
         return RecordId;
     }
 
-    public void setRecordId(String recordId) {
+    public void setRecordId(Object recordId) {
         RecordId = recordId;
     }
 
-    public String getTotalRecord() {
+    public int getTotalRecord() {
         return TotalRecord;
     }
 
-    public void setTotalRecord(String totalRecord) {
+    public void setTotalRecord(int totalRecord) {
         TotalRecord = totalRecord;
     }
 
-    public String getPageNo() {
+    public int getPageNo() {
         return PageNo;
     }
 
-    public void setPageNo(String pageNo) {
+    public void setPageNo(int pageNo) {
         PageNo = pageNo;
     }
 
-    public String getPageSize() {
+    public int getPageSize() {
         return PageSize;
     }
 
-    public void setPageSize(String pageSize) {
+    public void setPageSize(int pageSize) {
         PageSize = pageSize;
     }
 
-    public String getStatus() {
+    public com.example.retrofit_login.Model.ApiPacket getApiPacket() {
+        return ApiPacket;
+    }
+
+    public void setApiPacket(com.example.retrofit_login.Model.ApiPacket apiPacket) {
+        ApiPacket = apiPacket;
+    }
+
+    public int getStatus() {
         return Status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         Status = status;
     }
 
-    public ApiPacket getApiPacket() {
-        return apiPacket;
+    public LoginResponse(boolean success, String message, String tag, long serverRecordId, Object recordId, int totalRecord, int pageNo, int pageSize, com.example.retrofit_login.Model.ApiPacket apiPacket, int status) {
+        Success = success;
+        Message = message;
+        Tag = tag;
+        ServerRecordId = serverRecordId;
+        RecordId = recordId;
+        TotalRecord = totalRecord;
+        PageNo = pageNo;
+        PageSize = pageSize;
+        ApiPacket = apiPacket;
+        Status = status;
     }
 
-    public void setApiPacket(ApiPacket apiPacket) {
-        this.apiPacket = apiPacket;
+    @Override
+    public String toString() {
+        return "LoginResponse{" +
+                "Success=" + Success +
+                ", Message='" + Message + '\'' +
+                ", Tag='" + Tag + '\'' +
+                ", ServerRecordId=" + ServerRecordId +
+                ", RecordId=" + RecordId +
+                ", TotalRecord=" + TotalRecord +
+                ", PageNo=" + PageNo +
+                ", PageSize=" + PageSize +
+                ", ApiPacket=" + ApiPacket +
+                ", Status=" + Status +
+                '}';
     }
 }
