@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         LoginRequest request= new LoginRequest("963a5ef80129a9d5",pass,user);
-        Call<LoginResponse> call = RetrofitApi.getInstance().getService().login(request);
+        Call<LoginResponse> call = RetrofitApi.getInstance().getService().login("application/json",request);
 
         call.enqueue(new Callback<LoginResponse>() {
             @Override
