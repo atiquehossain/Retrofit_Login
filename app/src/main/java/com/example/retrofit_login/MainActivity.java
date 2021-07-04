@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         button=(Button)findViewById(R.id.button);
 
-
+        Log.e("sametag", "button " );
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("sametag", "button " );
+
 
                 if(validation()){
                     retrofit_log_in_operation();
