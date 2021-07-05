@@ -1,24 +1,33 @@
 package com.example.retrofit_login.Model;
 
-public class ApiPacket {
-    Packet packet;
+import java.util.List;
 
-    public ApiPacket(Packet packet) {
-        this.packet = packet;
+public class ApiPacket<T> {
+    private T Packet;
+    private List<T> PacketList;
+
+    public T getPacket() {
+        return Packet;
     }
 
-    public Packet getPacket() {
-        return packet;
+    public void setPacket(T packet) {
+        Packet = packet;
     }
 
-    public void setPacket(Packet packet) {
-        this.packet = packet;
+    public List<T> getPacketList() {
+        return PacketList;
+    }
+
+    public void setPacketList(List<T> packetList) {
+        PacketList = packetList;
     }
 
     @Override
     public String toString() {
         return "ApiPacket{" +
-                "packet=" + packet +
+                "Packet=" + Packet +
+                ", PacketList=" + PacketList +
                 '}';
     }
 }
+

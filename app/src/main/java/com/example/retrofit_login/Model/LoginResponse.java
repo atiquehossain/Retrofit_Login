@@ -9,7 +9,7 @@ public class LoginResponse {
     public int TotalRecord;
     public int PageNo;
     public int PageSize;
-    public ApiPacket ApiPacket;
+    public ApiPacket ApiPacket = new ApiPacket();
     public int Status;
 
     public boolean isSuccess() {
